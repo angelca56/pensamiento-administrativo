@@ -8,40 +8,40 @@ const etapas = [
         titulo: "Planificación",
         descripcion: "¿Cuál es el primer paso en la planificación?",
         opciones: [
-            { texto: "Definir objetivos", siguienteFase: 1, feedback: "¡Correcto! Los objetivos son la base de la planificación.", puntos: 20, color: "green" },
             { texto: "Comprar insumos", siguienteFase: 1, feedback: "Incorrecto. Eso no forma parte de la planificación inicial.", puntos: 0, color: "red" },
-            { texto: "Contratar personal", siguienteFase: 1, feedback: "Incorrecto. Primero se definen los objetivos.", puntos: 5, color: "yellow" },
-            { texto: "Ver una película", siguienteFase: 1, feedback: "Completamente incorrecto.", puntos: -5, color: "red" }
+            { texto: "Definir objetivos", siguienteFase: 1, feedback: "¡Correcto! Los objetivos son la base de la planificación.", puntos: 20, color: "green" },
+            { texto: "Ver una película", siguienteFase: 1, feedback: "Completamente incorrecto.", puntos: -5, color: "red" },
+            { texto: "Contratar personal", siguienteFase: 1, feedback: "Incorrecto. Primero se definen los objetivos.", puntos: 5, color: "yellow" }
         ]
     },
     {
         titulo: "Organización",
         descripcion: "¿Cómo organizas un equipo de trabajo?",
         opciones: [
-            { texto: "Definir roles y responsabilidades", siguienteFase: 2, feedback: "¡Correcto! Así se evita confusión.", puntos: 20, color: "green" },
             { texto: "Hacer que todos trabajen en todo", siguienteFase: 2, feedback: "No es eficiente, genera caos.", puntos: 5, color: "yellow" },
-            { texto: "Dejar que cada uno haga lo que quiera", siguienteFase: 2, feedback: "Incorrecto. Se necesita estructura.", puntos: 0, color: "red" },
-            { texto: "Hacer una fiesta", siguienteFase: 2, feedback: "Esto no tiene nada que ver con organización.", puntos: -5, color: "red" }
+            { texto: "Hacer una fiesta", siguienteFase: 2, feedback: "Esto no tiene nada que ver con organización.", puntos: -5, color: "red" },
+            { texto: "Definir roles y responsabilidades", siguienteFase: 2, feedback: "¡Correcto! Así se evita confusión.", puntos: 20, color: "green" },
+            { texto: "Dejar que cada uno haga lo que quiera", siguienteFase: 2, feedback: "Incorrecto. Se necesita estructura.", puntos: 0, color: "red" }
         ]
     },
     {
         titulo: "Dirección",
         descripcion: "¿Cómo motivarías al equipo?",
         opciones: [
-            { texto: "Brindar incentivos y reconocimiento", siguienteFase: 3, feedback: "¡Bien! Motivar es clave en la dirección.", puntos: 20, color: "green" },
-            { texto: "Dar órdenes sin explicación", siguienteFase: 3, feedback: "No es una buena forma de liderazgo.", puntos: 5, color: "yellow" },
             { texto: "Ignorar al equipo", siguienteFase: 3, feedback: "Incorrecto. La dirección requiere atención.", puntos: 0, color: "red" },
-            { texto: "Jugar videojuegos en el trabajo", siguienteFase: 3, feedback: "Completamente fuera de lugar.", puntos: -5, color: "red" }
+            { texto: "Brindar incentivos y reconocimiento", siguienteFase: 3, feedback: "¡Bien! Motivar es clave en la dirección.", puntos: 20, color: "green" },
+            { texto: "Jugar videojuegos en el trabajo", siguienteFase: 3, feedback: "Completamente fuera de lugar.", puntos: -5, color: "red" },
+            { texto: "Dar órdenes sin explicación", siguienteFase: 3, feedback: "No es una buena forma de liderazgo.", puntos: 5, color: "yellow" }
         ]
     },
     {
         titulo: "Control",
         descripcion: "¿Cómo evaluarías el desempeño del equipo?",
         opciones: [
-            { texto: "Revisar KPIs y métricas", siguienteFase: -1, feedback: "¡Correcto! Es la mejor manera de medir resultados.", puntos: 20, color: "green" },
             { texto: "Preguntar cómo se sienten", siguienteFase: -1, feedback: "Útil, pero no suficiente.", puntos: 5, color: "yellow" },
             { texto: "No hacer nada", siguienteFase: -1, feedback: "Incorrecto. Evaluar es fundamental.", puntos: 0, color: "red" },
-            { texto: "Hacer una carrera de autos", siguienteFase: -1, feedback: "No tiene nada que ver con control.", puntos: -5, color: "red" }
+            { texto: "Hacer una carrera de autos", siguienteFase: -1, feedback: "No tiene nada que ver con control.", puntos: -5, color: "red" },
+            { texto: "Revisar KPIs y métricas", siguienteFase: -1, feedback: "¡Correcto! Es la mejor manera de medir resultados.", puntos: 20, color: "green" }
         ]
     }
 ];
