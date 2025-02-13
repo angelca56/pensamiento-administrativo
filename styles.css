@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#app {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px; /* Max width keeps it from getting too large */
+    margin: 10px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#opciones {
+    margin-top: 20px;
+}
+
+#feedback {
+    font-size: 16px;
+    margin-top: 10px;
+    display: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+.correcto {
+    background-color: green;
+    color: white;
+    padding: 15px;  
+    border-radius: 8px;  
+    font-weight: bold;
+    font-size: 18px;  
+    border: 2px solid white;
+    text-align: center;  
+}
+
+.incorrecto {
+    background-color: red;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 18px;
+    border: 2px solid white;
+    text-align: center;
+}
+
+.media-correcta {
+    background-color: yellow;
+    color: black;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 18px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #333;
+    font-size: 18px;
+}
+
+#temporizador {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+.temporizador-verde {
+    background-color: #28a745;
+}
+
+.temporizador-naranja {
+    background-color: #ff9800;
+}
+
+.temporizador-rojo {
+    background-color: #dc3545;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* Adds padding for small screens */
+    }
+
+    h1 {
+        font-size: 22px; /* Adjusts font size for smaller screens */
+    }
+
+    button {
+        font-size: 14px; /* Reduces button font size */
+        padding: 12px 15px; /* Adjusts padding for smaller screens */
+    }
+
+    #app {
+        width: 100%; /* Ensures app container takes full width */
+        padding: 15px; /* Reduces padding inside the app container */
+    }
+
+    #feedback {
+        font-size: 14px; /* Adjust feedback font size */
+    }
+
+    #temporizador {
+        font-size: 16px; /* Reduces font size of the timer */
+    }
+}

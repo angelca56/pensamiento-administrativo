@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        #bienvenida {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        #bienvenida h2 {
+            margin: 0;
+        }
+        #botonJugar {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #botonJugar:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div id="bienvenida">
+    <h2>Bienvenidos al Simulador de Decisiones Administrativas</h2>
+    <p>Coordinador: DELMAR DANILO TZUN PÉREZ</p>
+    <p>Miembros:</p>
+    <ul>
+        <li>ANTHONY JUAN PABLO ORELLANA DE LEÓN</li>
+        <li>LUIS ANGEL CABRERA GIRÓN</li>
+        <li>HENRY GABRIEL JERÉZ GALINDO</li>
+        <li>MARVIN JOSÉ SÁNCHEZ AGUSTÍN</li>
+        <li>GRUPO #1 </li>
+    </ul>
+    <button id="botonJugar" onclick="iniciarSimulador()">Entrar / Jugar</button>
+</div>
+
+<script>
+    function iniciarSimulador() {
+        // Redirigir a la página de la simulación
+        window.location.href = "simulacion.html"; // Asegúrate de que la ruta de tu página de simulación sea correcta
+    }
+</script>
+
+</body>
+</html>

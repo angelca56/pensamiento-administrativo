@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Decisiones Administrativas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Simulador de Decisiones Administrativas</h1>
+        <p>Elige la mejor opción para cada etapa del proceso administrativo.</p>
+        
+        <div id="fase"></div>
+        <div id="opciones"></div>
+        <div id="feedback" style="display: none;"></div>
+        <button id="siguiente" style="display: none;" onclick="siguienteFase()">Siguiente</button>
+        <div id="resultado"></div>
+        <div id="temporizador"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
