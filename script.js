@@ -8,40 +8,50 @@ const etapas = [
         titulo: "Planificación",
         descripcion: "¿Cuál es el primer paso en la planificación?",
         opciones: [
-            { texto: "Comprar insumos", siguienteFase: 1, feedback: "Incorrecto. Eso no forma parte de la planificación inicial.", puntos: 0, color: "red" },
             { texto: "Definir objetivos", siguienteFase: 1, feedback: "¡Correcto! Los objetivos son la base de la planificación.", puntos: 20, color: "green" },
-            { texto: "Ver una película", siguienteFase: 1, feedback: "Completamente incorrecto.", puntos: -5, color: "red" },
-            { texto: "Contratar personal", siguienteFase: 1, feedback: "Incorrecto. Primero se definen los objetivos.", puntos: 5, color: "yellow" }
+            { texto: "Analizar el entorno externo e interno", siguienteFase: 1, feedback: "¡Correcto! Es necesario conocer el entorno para una buena planificación.", puntos: 20, color: "green" },
+            { texto: "Establecer una estrategia sin analizar riesgos", siguienteFase: 1, feedback: "Incorrecto. Se deben evaluar oportunidades y riesgos.", puntos: -5, color: "red" },
+            { texto: "No predefinir objetivos", siguienteFase: 1, feedback: "Incorrecto. Sin objetivos claros no hay rumbo en la planificación.", puntos: -5, color: "red" }
         ]
     },
     {
         titulo: "Organización",
-        descripcion: "¿Cómo organizas un equipo de trabajo?",
+        descripcion: "¿Qué función es crucial en la organización para evitar la duplicidad de funciones?",
         opciones: [
-            { texto: "Hacer que todos trabajen en todo", siguienteFase: 2, feedback: "No es eficiente, genera caos.", puntos: 5, color: "yellow" },
-            { texto: "Hacer una fiesta", siguienteFase: 2, feedback: "Esto no tiene nada que ver con organización.", puntos: -5, color: "red" },
-            { texto: "Definir roles y responsabilidades", siguienteFase: 2, feedback: "¡Correcto! Así se evita confusión.", puntos: 20, color: "green" },
-            { texto: "Dejar que cada uno haga lo que quiera", siguienteFase: 2, feedback: "Incorrecto. Se necesita estructura.", puntos: 0, color: "red" }
+            { texto: "División del trabajo", siguienteFase: 2, feedback: "¡Correcto! La división del trabajo mejora la eficiencia.", puntos: 20, color: "green" },
+            { texto: "Jerarquización", siguienteFase: 2, feedback: "Esto ayuda a establecer niveles de autoridad, pero la división del trabajo es clave.", puntos: 3, color: "yellow" },
+            { texto: "Falta de roles definidos", siguienteFase: 2, feedback: "Incorrecto. No tener roles claros genera caos en la organización.", puntos: -5, color: "red" },
+            { texto: "Unificar todas las tareas en un solo departamento", siguienteFase: 2, feedback: "Esto no es efectivo, crea confusión y reduce la especialización.", puntos: -5, color: "red" }
+        ]
+    },
+    {
+        titulo: "Integración",
+        descripcion: "¿Cuál es una función clave de la integración en la organización?",
+        opciones: [
+            { texto: "Reclutamiento y selección de personal", siguienteFase: 3, feedback: "¡Correcto! Elegir el perfil adecuado es crucial para el éxito organizacional.", puntos: 20, color: "green" },
+            { texto: "Asignación de recursos materiales", siguienteFase: 3, feedback: "¡Correcto! Los recursos materiales son fundamentales para el rendimiento.", puntos: 20, color: "green" },
+            { texto: "Reemplazar a personal sin evaluar su desempeño", siguienteFase: 3, feedback: "Incorrecto. El personal debe ser evaluado y entrenado, no simplemente reemplazado.", puntos: -5, color: "red" },
+            { texto: "Dejar de capacitar al personal", siguienteFase: 3, feedback: "Incorrecto. La capacitación es clave para un buen desempeño.", puntos: -5, color: "red" }
         ]
     },
     {
         titulo: "Dirección",
-        descripcion: "¿Cómo motivarías al equipo?",
+        descripcion: "¿Qué característica de la dirección administrativa es esencial para garantizar el éxito organizacional?",
         opciones: [
-            { texto: "Ignorar al equipo", siguienteFase: 3, feedback: "Incorrecto. La dirección requiere atención.", puntos: 0, color: "red" },
-            { texto: "Brindar incentivos y reconocimiento", siguienteFase: 3, feedback: "¡Bien! Motivar es clave en la dirección.", puntos: 20, color: "green" },
-            { texto: "Jugar videojuegos en el trabajo", siguienteFase: 3, feedback: "Completamente fuera de lugar.", puntos: -5, color: "red" },
-            { texto: "Dar órdenes sin explicación", siguienteFase: 3, feedback: "No es una buena forma de liderazgo.", puntos: 5, color: "yellow" }
+            { texto: "Conducción de la organización", siguienteFase: 4, feedback: "¡Correcto! Los gerentes deben tomar decisiones claves para cumplir con los objetivos.", puntos: 20, color: "green" },
+            { texto: "Evaluación del desempeño constante", siguienteFase: 4, feedback: "Esto es importante, pero la dirección efectiva empieza con la toma de decisiones.", puntos: 3, color: "yellow" },
+            { texto: "No tomar decisiones importantes", siguienteFase: 4, feedback: "Incorrecto. La dirección sin decisiones no tiene rumbo.", puntos: -5, color: "red" },
+            { texto: "No contar con un liderazgo claro", siguienteFase: 4, feedback: "Incorrecto. El liderazgo es clave para guiar al equipo hacia los objetivos.", puntos: -5, color: "red" }
         ]
     },
     {
         titulo: "Control",
-        descripcion: "¿Cómo evaluarías el desempeño del equipo?",
+        descripcion: "¿Cuál es una etapa importante en el proceso de control?",
         opciones: [
-            { texto: "Preguntar cómo se sienten", siguienteFase: -1, feedback: "Útil, pero no suficiente.", puntos: 5, color: "yellow" },
-            { texto: "No hacer nada", siguienteFase: -1, feedback: "Incorrecto. Evaluar es fundamental.", puntos: 0, color: "red" },
-            { texto: "Hacer una carrera de autos", siguienteFase: -1, feedback: "No tiene nada que ver con control.", puntos: -5, color: "red" },
-            { texto: "Revisar KPIs y métricas", siguienteFase: -1, feedback: "¡Correcto! Es la mejor manera de medir resultados.", puntos: 20, color: "green" }
+            { texto: "Establecimiento de estándares", siguienteFase: -1, feedback: "¡Correcto! Los estándares definen lo que se espera en términos de rendimiento.", puntos: 20, color: "green" },
+            { texto: "Revisión de los reportes sin compararlos con los estándares", siguienteFase: -1, feedback: "Incorrecto. Comparar el desempeño con los estándares es esencial para el control.", puntos: -5, color: "red" },
+            { texto: "Tomar decisiones sin medir el desempeño", siguienteFase: -1, feedback: "Incorrecto. La medición es fundamental antes de tomar decisiones correctivas.", puntos: -5, color: "red" },
+            { texto: "Monitoreo constante de los recursos", siguienteFase: -1, feedback: "Correcto, es necesario mantener un seguimiento continuo.", puntos: 3, color: "yellow" }
         ]
     }
 ];
@@ -101,7 +111,6 @@ function tomarDecision(opcion) {
     // Cambiar color del temporizador según la respuesta
     document.getElementById("temporizador").style.backgroundColor = opcion.color;
 }
-
 
 function siguienteFase() {
     faseActual++;
