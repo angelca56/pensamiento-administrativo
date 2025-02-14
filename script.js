@@ -56,6 +56,13 @@ const etapas = [
     }
 ];
 
+function mezclarRespuestas(opciones) {
+    for (let i = opciones.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [opciones[i], opciones[j]] = [opciones[j], opciones[i]];
+    }
+}
+
 function iniciarSimulador() {
     faseActual = 0;
     puntuacion = 0;
@@ -70,6 +77,9 @@ function mostrarFase() {
     document.getElementById("temporizador").style.display = "block";
     resetearTemporizador();
     iniciarTemporizador();
+
+    // Mezclamos las respuestas
+    mezclarRespuestas(fase.opciones);
 
     fase.opciones.forEach(opcion => {
         const boton = document.createElement("button");
@@ -88,15 +98,12 @@ function tomarDecision(opcion) {
     clearInterval(timer);
     document.getElementById("temporizador").style.display = "none";
 
-    // Cambiar el texto del feedback
     const feedbackElement = document.getElementById("feedback");
     feedbackElement.innerHTML = `${opcion.feedback} <br>Puntuación actual: ${puntuacion}`;
     feedbackElement.style.display = "block";
 
-    // Limpiar clases de color antes de asignar la nueva
     feedbackElement.classList.remove("correcto", "incorrecto", "media-correcta");
 
-    // Asignar clase según el color de la respuesta
     if (opcion.color === "green") {
         feedbackElement.classList.add("correcto");
     } else if (opcion.color === "red") {
@@ -108,7 +115,6 @@ function tomarDecision(opcion) {
     document.getElementById("opciones").innerHTML = "";
     document.getElementById("siguiente").style.display = "block";
 
-    // Cambiar color del temporizador según la respuesta
     document.getElementById("temporizador").style.backgroundColor = opcion.color;
 }
 
@@ -123,14 +129,13 @@ function siguienteFase() {
 
 function resetearTemporizador() {
     tiempoRestante = 30;
-    document.getElementById("temporizador").style.backgroundColor = "green";  // Inicialmente verde
+    document.getElementById("temporizador").style.backgroundColor = "green";
 }
 
 function iniciarTemporizador() {
     timer = setInterval(() => {
         document.getElementById("temporizador").innerHTML = `Tiempo restante: ${tiempoRestante}s`;
-        
-        // Cambiar el color del temporizador según el tiempo restante
+
         if (tiempoRestante <= 10) {
             document.getElementById("temporizador").style.backgroundColor = "red";
         } else if (tiempoRestante <= 20) {
