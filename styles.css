@@ -79,13 +79,13 @@ button:hover {
 }
 
 .media-correcta {
-    background-color: yellow;
-    color: black;
+    background-color: #ffeb3b; /* Amarillo pastel, más suave */
+    color: #333; /* Gris oscuro para mayor contraste */
     padding: 15px;
     border-radius: 8px;
     font-weight: bold;
     font-size: 18px;
-    border: 2px solid black;
+    border: 2px solid #ccc; /* Bordes más suaves */
     text-align: center;
 }
 
